@@ -8,5 +8,5 @@ Welcome to My Portfolio! I'm a Database Administrator handling tasks such as **q
 - 📂 **Projects**: Case studies on database performance, caching with Redis, and query optimization.
 
 📬 Contact Me
-- LinkedIn: [https://id.linkedin.com/in/gugus](#) 
-- GitHub: [https://github.com/gugusx](#) 
+- LinkedIn: https://id.linkedin.com/in/gugus
+- GitHub: https://github.com/gugusx 
