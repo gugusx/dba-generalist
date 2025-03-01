@@ -1,4 +1,4 @@
-# 🛠 Database Administrator Generalist 
+# 💡 Introduction
 This Repository contains various **SQL queries**, **data analytics** and other related tasks processes used for **Database Administration (DBA)** and **Business Intelligence (BI)** needs.
 
 # 📌 Highlights 
