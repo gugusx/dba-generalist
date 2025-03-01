@@ -1,9 +1,10 @@
 --- USE POSTGRESQL TOOLS
 --- OS SERVER USING DEBIAN
 
+
 --- DATABASE VARIABLE
 VTABLE="customize with your table"
-VCOLUMN="customize with your column"
+
 
 --- QUERY FOR COLLECTING AND ANALYZING ROMBS DATA
 WITH
