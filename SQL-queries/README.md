@@ -1,5 +1,5 @@
-## 📂 Folder: `queries-analytics`
-This folder contains a collection of SQL queries for **data processing**, **business analytics**, and other related tasks.
+## 📂 Folder: `SQL-Queries`
+This folder contains a collection of SQL queries for **data processing**, **business analytics**, **troubleshooting**, **setup** and other related tasks.
 
 ### 📌 **Available Queries**
 | File | Description |
