@@ -1,0 +1,37 @@
+- name: Insert config to PostgreSQL tables
+  hosts: remoteServers
+  become: yes
+  gather_facts: no
+  vars:
+    db_user: "customize_db_user"
+    db_password: "customize_db_password"
+    db_name: "customize_db_name"
+    db_host: "customize_db_host"
+    db_port: "customize_db_port"
+
+  tasks:
+    - name: Check if python3-psycopg2 is installed
+      command: dpkg -l python3-psycopg2
+      register: psycopg2_check
+      failed_when: psycopg2_check.rc > 1
+      changed_when: false
+
+    - name: Install python3-psycopg2 if not installed
+      apt:
+        name: python3-psycopg2
+        state: present
+      when: psycopg2_check.rc != 0
+    
+    - name: Insert rows in specific tables
+      community.postgresql.postgresql_query:
+        db: "{{ db_name }}"
+        login_user: "{{ db_user }}"
+        login_password: "{{ db_password }}"
+        login_host: "{{ db_host }}"
+        query:
+          - "INSERT INTO table_a VALUES (...);"
+      register: insert_result
+
+    - name: Debug query result
+      debug:
+        var: insert_result
