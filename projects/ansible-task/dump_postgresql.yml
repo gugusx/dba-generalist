@@ -26,8 +26,7 @@
         mode: '0600'
     
     - name: Dump PostgreSQL Databases
-      command: >
-        pg_dump -U {{ db_user }} -d {{ db_name }} -h {{ db_host }} | gzip > {{ backup_path }}/{{ backup_file }}
+      shell: "pg_dump -U {{ db_user }} -d {{ db_name }} -h {{ db_host }} | gzip > {{ backup_path }}/{{ backup_file }}"
       environment:
         PGPASSFILE: "/root/.pgpass"
 
