@@ -1,7 +1,7 @@
-## 📂 Folder: `bash-scripts`
-This folder contains a collection of bash script for automation process and other related tasks.
+## 📂 Folder: `ansible`
+This folder contains a collection of ansible script for automation process and other related tasks.
 
 ### 📌 **Available Scripts**
 | File | Description |
 |------|-----------|
-| `backup-full-db.sh` | Example script for backup full database in PostgreSQL. |
+| `dump_postgresql.yml` | dump PostgreSQL database, and also can used to dump schema. |
