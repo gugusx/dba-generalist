@@ -6,3 +6,4 @@ This folder contains a collection of ansible script for automation process and o
 |------|-----------|
 | `dump_postgresql.yml` | dump PostgreSQL database, and also can used to dump schema. |
 | `dump_mysql.yml` | dump MySQL database, and also can used to dump schema. |
+| `query_insert_postgresql.yml` | query for insert row into table. |
