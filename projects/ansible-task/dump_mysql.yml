@@ -1,0 +1,22 @@
+- name: Backup MySQL Database
+  hosts: remoteServers
+  become: yes
+  gather_facts: no
+  vars:
+    db_user: "customize_db_user"
+    db_password: "customize_db_password"
+    db_name: "customize_db_name"
+    db_host: "customize_db_host"
+    db_port: "customize_db_port"
+    backup_path: "/path/to/backup"
+    backup_file: "{{ db_name }}_{{ lookup('pipe', 'date +%F') }}.gz"
+
+  tasks:
+    - name: Ensure Backup Directory exists
+      file:
+        path: "{{ backup_path }}"
+        state: directory
+        mode: '0755'
+    
+    - name: Dump MySQL Databases
+      shell: "mysqldump -u {{ db_user }} -d {{ db_name }} -h {{ db_host }} -p {{ db_password }} | gzip > {{ backup_path }}/{{ backup_file }}"
