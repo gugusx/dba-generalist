@@ -17,18 +17,18 @@ if [ "$(date +%-d)" == "1" ]; then
     do
         echo "API $a"
         stat_sync=$(curl -X POST "http://$ip:$ip_port/$appname/$a?month=$lastmonth&year=$lastyearmonth")
-        tanggal=$(date +"%Y-%m-%d %H:%M:%m")
-        status=$(echo "$stat_sync" | grep -oP '"message":\s*"\K[^"]+')
-        echo "$a, $status, $tanggal" > /path/to/lastmonth_log_API_$a.txt
+        vDate=$(date +"%Y-%m-%d %H:%M:%m")
+        vStatus=$(echo "$stat_sync" | grep -oP '"message":\s*"\K[^"]+')
+        echo "$a, $vStatus, $vDate" > /path/to/lastmonth_log_API_$a.txt
     done
 elif [ "$(date +%-d)" == "15" ]; then
     for a in "api1" "api2" "api3" "api4"
     do
         echo "API $a"
         stat_sync=$(curl -X POST "http://$ip:$ip_port/$appname/$a?month=$currentmonth&year=$currentyear")
-        tanggal=$(date +"%Y-%m-%d %H:%M:%m")
-        status=$(echo "$stat_sync" | grep -oP '"message":\s*"\K[^"]+')
-        echo "$a, $status, $tanggal" > /path/to/currentmonth_log_API_$a.txt
+        vDate=$(date +"%Y-%m-%d %H:%M:%m")
+        vStatus=$(echo "$stat_sync" | grep -oP '"message":\s*"\K[^"]+')
+        echo "$a, $vStatus, $vDate" > /path/to/currentmonth_log_API_$a.txt
     done
 else
     echo "Skip"
