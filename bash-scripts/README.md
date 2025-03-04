@@ -4,5 +4,6 @@ This folder contains a collection of bash script for automation process and othe
 ### 📌 **Available Scripts**
 | File | Description |
 |------|-----------|
-| `backup-full-db.sh` | Example script for backup full database in PostgreSQL. |
-| `execute_api.sh` | Example script for execute API automatically. |
+| `backup-full-db.sh` | Script for backup full database in PostgreSQL. |
+| `execute_api.sh` | Script for execute API automatically. |
+| `qontak_integration.sh` | Script for integrating Apps with Qontak. |
