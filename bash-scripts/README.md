@@ -5,3 +5,4 @@ This folder contains a collection of bash script for automation process and othe
 | File | Description |
 |------|-----------|
 | `backup-full-db.sh` | Example script for backup full database in PostgreSQL. |
+| `execute_api.sh` | Example script for execute API automatically. |
